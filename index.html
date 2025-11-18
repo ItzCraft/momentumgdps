@@ -1,3 +1,56 @@
 <!DOCTYPE html>
-<head></head>
-<body></body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MomentumGDPS</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <!-- Particle background canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <!-- inline SVG fallback + external file also provided in project -->
+      <img src="logo.svg" alt="MomentumGDPS logo" class="logo-img" />
+      <span class="brand">MomentumGDPS</span>
+    </div>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Lists</a>
+      <a href="#">Download</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="gradient-text">MomentumGDPS</h1>
+      <p class="gradient-text description">MomentumGDPS — is a new gdps which provide you entire new experience, decent rate standarts and will much more in future! Soon we'll make an custom texture pack for gdps and when our community grow — we're gonna host gauntlet, map packs contests and much more! So stay tuned! </p>
+    </section>
+
+    <section class="buttons-wrap">
+      <div class="button-grid" id="buttonGrid">
+        <!-- Buttons -->
+        <button class="gdps-button"><img src="icons/dashboard.svg" alt="dashboars"/><span>Dashboard</span></button>
+        <button class="gdps-button"><img src="icons/lists.svg" alt="lists"/><span>Lists</span></button>
+        <button class="gdps-button"><img src="icons/github.svg" alt="github"/><span>Github</span></button>
+        <button class="gdps-button"><img src="icons/discord.svg" alt="discord"/><span>Discord server</span></button>
+        <button class="gdps-button"><img src="icons/download.svg" alt="download"/><span>Download</span></button>
+      </div>
+    </section>
+    
+    <section class="lists">
+      <div class="lists-redirection" id="listsRedirection">
+        <button class="gdps-button"><img src="icons/demonlist.svg" alt="demonlist"/><span>Demon list</span></button>
+        <button class="gdps-button"><img src="icons/challengelist.svg" alt="challengelist"/><span>Challenge list</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 MomentumGDPS</footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
