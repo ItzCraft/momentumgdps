@@ -51,7 +51,7 @@ body::before {
   padding:0 20px;
   background:rgba(0,0,0,0.18);
   backdrop-filter:blur(8px);
-  grid-template-columns:repeat(5,1fr);
+  grid-template-columns:repeat(4,1fr);
   background: linear-gradient(180deg, var(--btn-hover-top), var(--btn-hover-bottom));
   z-index:5;
 }
@@ -163,6 +163,7 @@ body::before {
 
 .lists-redirection {
   margin: 60px auto;
+  margin-top: 300px auto;
   gap: 15px;
   display:grid;
   grid-template-columns:repeat(5,1fr);
