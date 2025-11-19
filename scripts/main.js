@@ -58,6 +58,7 @@
   "https://your-gdps.com/lists",
   "https://github.com/ItzCraft/momentumgdps ",
   "https://discord.gg/TwCBCv7Wqj",
+  "https://youtube.com/@momentumgdps?si=M5sR5i5KjM_-dgXX",
   "https://your-gdps.com/download"
   ];
   
