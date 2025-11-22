@@ -163,7 +163,7 @@ body::before {
 
 .lists-redirection {
   margin: 60px auto;
-  margin-top: 300px auto;
+  margin-top: 300px;
   gap: 15px;
   display:grid;
   grid-template-columns:repeat(5,1fr);
