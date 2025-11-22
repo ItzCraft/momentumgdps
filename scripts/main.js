@@ -8,7 +8,7 @@
   canvas.width = w * DPR; canvas.height = h * DPR; canvas.style.width = w + 'px'; canvas.style.height = h + 'px'; ctx.scale(DPR, DPR);
 
   const particles = [];
-  const COUNT = Math.round((w*h)/5000); // density scaling
+  const COUNT = Math.round((w*h)/5000);
 
   function rand(min,max){return Math.random()*(max-min)+min}
 
@@ -47,24 +47,31 @@
     w = canvas.width = innerWidth; h = canvas.height = innerHeight;
     canvas.width = w * DPR; canvas.height = h * DPR; canvas.style.width = w + 'px'; canvas.style.height = h + 'px'; ctx.scale(DPR, DPR);
   });
-
-  // Small accessibility: allow keyboard adding
-  //addBtn.addEventListener('keydown', (e)=>{ if(e.key === 'Enter' || e.key === ' ') addBtn.click(); });
   
   // buttons logic
   const buttons = document.querySelectorAll('.gdps-button');
+  const listsSection = document.getElementById("listsRedirection");
+
   const links = [
-  "https://momentum.ps.fhgdps.com/dashboard/",
-  "https://your-gdps.com/lists",
-  "https://github.com/ItzCraft/momentumgdps ",
-  "https://discord.gg/TwCBCv7Wqj",
-  "https://youtube.com/@momentumgdps?si=M5sR5i5KjM_-dgXX",
-  "https://your-gdps.com/download"
-  ];
-  
-  buttons.forEach((btn, i) => {
-    btn.addEventListener('click', () => {
-      window.open(links[i], "_blank");
-    });
-  });
+     "https://momentum.ps.fhgdps.com/dashboard/",
+     null,  
+     "https://github.com/ItzCraft/momentumgdps",
+     "https://discord.gg/TwCBCv7Wqj",
+     "https://youtube.com/@momentumgdps?si=M5sR5i5KjM_-dgXX",
+     "https://your-gdps.com/download"
+   ];
+
+   buttons.forEach((btn, i) => {
+     btn.addEventListener('click', () => {
+       if (i === 1) {
+         listsSection.scrollIntoView({ behavior: "smooth" });
+         return;
+       }
+       if (links[i].startsWith("http")) {
+         window.open(links[i], "_blank");
+       } else {
+         window.location.href = links[i];
+       }
+     });
+   });
 })();
